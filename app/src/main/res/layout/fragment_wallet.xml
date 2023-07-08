@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.nub.tourmate.Fragment.WalletFragment">
+
+    <LinearLayout
+        android:padding="5dp"
+        android:id="@+id/linlayID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blue1"
+        android:orientation="vertical">
+
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:progressTint="@color/white"
+            android:layout_height="35dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"/>
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/expensePersentageTvId"
+                android:textColor="@color/white"
+                android:text="@string/_5"
+                android:layout_marginStart="22dp"
+                android:textSize="18sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/budExTvId"
+                android:gravity="right"
+                android:textColor="@color/white"
+                android:text="@string/_5"
+                android:layout_marginRight="25dp"
+                android:textSize="18sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:ignore="RtlHardcoded" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/currenBalanceDisplayTvId"
+            android:textColor="@color/white"
+            android:textSize="40sp"
+            android:layout_gravity="center"
+            android:text="@string/_1000_bdt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
+
+
+    <view class="androidx.recyclerview.widget.RecyclerView"
+        android:id="@+id/recyclerviewExpenseId"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/linlayID"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+
+        android:layout_marginRight="20dp">
+
+    </view>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingbtnId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:tint="@color/white"
+        android:backgroundTint="@color/mainColor"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="40dp"
+        android:src="@drawable/plusicon"
+        android:contentDescription="@string/todo" />
+
+</RelativeLayout>

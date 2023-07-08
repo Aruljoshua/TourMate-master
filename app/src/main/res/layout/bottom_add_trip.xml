@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:padding="15dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/addEventTvId"
+        android:gravity="center"
+        android:textSize="35sp"
+        android:text="@string/add_event"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="match_parent"
+        android:theme="@style/AppTheme.NoActionBar"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/tripNameId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/trip_name"
+            android:imeOptions="actionNext"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:singleLine="true"
+            tools:ignore="TouchTargetSizeCheck" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="match_parent"
+        android:theme="@style/AppTheme.NoActionBar"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/tripDescriptionId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/trip_description"
+            android:imeOptions="actionNext"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:singleLine="true"
+            tools:ignore="TouchTargetSizeCheck" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="match_parent"
+        android:theme="@style/AppTheme.NoActionBar"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/tripStartingPlaceEtId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints="no"
+            android:hint="@string/starting_place"
+            android:imeOptions="actionNext"
+            android:inputType="text"
+            android:singleLine="true"
+            tools:ignore="TouchTargetSizeCheck" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="match_parent"
+        android:theme="@style/AppTheme.NoActionBar"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/tripBudgetEtId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/estimated_budjet"
+            android:imeOptions="actionDone"
+            android:importantForAutofill="no"
+            android:inputType="number"
+            android:singleLine="true"
+            tools:ignore="TouchTargetSizeCheck" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <RelativeLayout
+        android:id="@+id/datepicklayoutid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="40dp">
+
+        <ImageView
+
+            android:id="@+id/dateiconId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/todo"
+            android:padding="10dp"
+            android:src="@drawable/datecalender"
+            app:tint="@color/mainColor"
+            tools:ignore="ImageContrastCheck" />
+
+        <TextView
+            android:id="@+id/opendatepickerTvID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@+id/dateiconId"
+            android:hint="@string/pick_tour_start_date"
+            android:paddingTop="12dp"
+            android:textColor="@color/mainColor"
+            android:textColorHint="#546E7A"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/todatepicklayoutid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="40dp">
+
+        <ImageView
+
+            android:id="@+id/todateiconId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/todo"
+            android:padding="10dp"
+            android:src="@drawable/datecalender"
+            app:tint="@color/mainColor"
+            tools:ignore="ImageContrastCheck" />
+
+        <TextView
+            android:id="@+id/toopendatepickerTvID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@+id/todateiconId"
+            android:hint="@string/pick_tour_end_date"
+            android:paddingTop="12dp"
+            android:textColor="@color/mainColor"
+            android:textColorHint="#546E7A"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+    <Button
+        android:id="@+id/addTrip"
+        android:textColor="@color/white"
+        android:layout_gravity="center"
+        android:text="@string/add_trip"
+        android:layout_marginTop="10dp"
+        android:textAllCaps="false"
+        android:background="@drawable/gradient_background"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</LinearLayout>
